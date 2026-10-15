@@ -4,23 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NancyTech Mobile | iPhones & Smartphones</title>
+  <title>NancyTech Mobile | Premium iPhones</title>
 
-  <meta name="description"
-    content="Explore iPhone models at NancyTech Mobile. Browse phones, compare prices, select storage and contact us about international orders.">
+  <meta name="description" content="Explore iPhones at NancyTech Mobile. Browse models, compare sample prices, select storage and send an international order enquiry.">
 
   <meta name="theme-color" content="#080808">
 
   <style>
     :root {
       --bg: #080808;
-      --panel: #141414;
-      --panel2: #1d1d1d;
+      --card: #151515;
+      --gold: #d6b46a;
       --white: #ffffff;
-      --muted: #a4a4a4;
-      --accent: #d6b46a;
+      --muted: #a8a8a8;
       --green: #25d366;
-      --border: #292929;
+      --border: #2b2b2b;
     }
 
     * {
@@ -40,41 +38,47 @@
       line-height: 1.6;
     }
 
-    button, input, select {
+    button,
+    input,
+    select {
       font: inherit;
     }
 
-    button, a {
+    button,
+    a {
       -webkit-tap-highlight-color: transparent;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
-    .topbar {
+    img {
+      max-width: 100%;
+    }
+
+    .announcement {
       background: #111;
-      text-align: center;
-      padding: 8px 12px;
-      font-size: 12px;
       color: #ddd;
+      text-align: center;
+      padding: 9px;
+      font-size: 12px;
       border-bottom: 1px solid var(--border);
     }
 
     header {
-      background: rgba(8, 8, 8, 0.96);
-      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
+      z-index: 50;
+      background: rgba(8, 8, 8, .97);
+      border-bottom: 1px solid var(--border);
     }
 
-    .nav {
+    .navbar {
       max-width: 1200px;
       margin: auto;
-      padding: 16px 20px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -82,172 +86,170 @@
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 900;
       letter-spacing: -1px;
     }
 
     .logo span {
-      color: var(--accent);
+      color: var(--gold);
     }
 
-    .nav-right {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
     }
 
-    .nav-link {
-      color: #ddd;
+    .nav-links a {
       font-size: 14px;
+      color: #ddd;
     }
 
     .cart-button {
-      background: var(--white);
-      color: #000;
+      background: white;
+      color: black;
+      padding: 10px 14px;
       border: 0;
       border-radius: 25px;
-      padding: 10px 15px;
       font-weight: bold;
       cursor: pointer;
-      white-space: nowrap;
     }
 
     .hero {
       max-width: 1200px;
       margin: auto;
-      padding: 75px 20px 55px;
+      padding: 65px 20px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 35px;
     }
 
     .eyebrow {
-      color: var(--accent);
+      color: var(--gold);
       font-size: 12px;
       font-weight: bold;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
       margin-bottom: 15px;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 68px);
+      font-size: clamp(40px, 6vw, 70px);
       line-height: 1.08;
       letter-spacing: -2px;
       margin-bottom: 20px;
     }
 
     .hero h1 span {
-      color: var(--accent);
+      color: var(--gold);
     }
 
     .hero p {
       color: var(--muted);
-      max-width: 500px;
+      max-width: 470px;
       margin-bottom: 25px;
     }
 
     .primary-button {
       display: inline-block;
-      background: var(--white);
-      color: #000;
-      padding: 13px 21px;
+      padding: 13px 22px;
+      background: white;
+      color: black;
+      border: 0;
       border-radius: 7px;
       font-weight: bold;
-      border: 0;
       cursor: pointer;
     }
 
-    .hero-visual {
+    .primary-button:hover {
+      background: var(--gold);
+    }
+
+    .hero-image {
       min-height: 300px;
-      border: 1px solid #303030;
-      border-radius: 20px;
-      background:
-        radial-gradient(ellipse at 50% 45%, #35312a 0%, #171717 42%, #101010 75%);
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 18px;
+      background: radial-gradient(ellipse, #373127, #151515 65%);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      overflow: hidden;
     }
 
-    .hero-visual img {
-      max-width: 100%;
-      width: 380px;
-      height: 290px;
+    .hero-image img {
+      width: 100%;
+      height: 300px;
       object-fit: contain;
-      filter: drop-shadow(0 20px 25px #000);
+      filter: drop-shadow(0 15px 20px #000);
     }
 
-    .benefits {
+    .features {
       max-width: 1200px;
-      margin: auto;
       padding: 0 20px 40px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
-    .benefit {
-      background: var(--panel);
+    .feature {
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 18px 12px;
+      padding: 18px 10px;
       text-align: center;
     }
 
-    .benefit strong {
+    .feature strong {
       display: block;
       font-size: 14px;
-      margin-bottom: 4px;
     }
 
-    .benefit small {
+    .feature small {
+      display: block;
       color: var(--muted);
       font-size: 12px;
+      margin-top: 5px;
     }
 
     .section {
       max-width: 1200px;
+      padding: 45px 20px 65px;
       margin: auto;
-      padding: 40px 20px 65px;
     }
 
     .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 20px;
       margin-bottom: 25px;
     }
 
     .section-heading h2 {
-      font-size: clamp(27px, 4vw, 38px);
+      font-size: clamp(28px, 4vw, 40px);
       letter-spacing: -1px;
     }
 
     .section-heading p {
       color: var(--muted);
       font-size: 14px;
+      margin-top: 5px;
     }
 
     .filters {
       display: grid;
-      grid-template-columns: 1fr 180px;
+      grid-template-columns: 1fr 200px;
       gap: 12px;
       margin-bottom: 25px;
     }
 
     .filters input,
     .filters select,
-    .form-field input,
-    .form-field select {
+    .form-group input,
+    .form-group select {
       width: 100%;
       padding: 13px;
       color: white;
-      background: var(--panel);
+      background: #171717;
       border: 1px solid #363636;
       border-radius: 7px;
       outline: none;
@@ -255,9 +257,8 @@
 
     .filters input:focus,
     .filters select:focus,
-    .form-field input:focus,
-    .form-field select:focus {
-      border-color: var(--accent);
+    .form-group input:focus {
+      border-color: var(--gold);
     }
 
     .product-grid {
@@ -266,28 +267,28 @@
       gap: 17px;
     }
 
-    .product {
-      background: var(--panel);
+    .product-card {
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 13px;
+      border-radius: 12px;
       overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: transform .2s, border-color .2s;
     }
 
-    .product:hover {
+    .product-card:hover {
       transform: translateY(-4px);
-      border-color: #555;
+      border-color: #666;
     }
 
     .product-image {
-      height: 210px;
       position: relative;
-      background:
-        radial-gradient(ellipse at center, #303030, #161616 70%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 220px;
       padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: radial-gradient(ellipse, #333, #171717 72%);
     }
 
     .product-image img {
@@ -296,15 +297,24 @@
       object-fit: contain;
     }
 
+    /* Show a fallback if an external image fails to load. */
+    .product-image.image-fallback::after {
+      content: "📱";
+      position: absolute;
+      font-size: 100px;
+      filter: drop-shadow(0 10px 15px #000);
+    }
+
     .badge {
       position: absolute;
+      z-index: 2;
       top: 10px;
       left: 10px;
-      font-size: 10px;
+      background: var(--gold);
       color: #111;
-      background: var(--accent);
       padding: 4px 8px;
       border-radius: 4px;
+      font-size: 10px;
       font-weight: bold;
     }
 
@@ -314,605 +324,73 @@
 
     .product-info h3 {
       font-size: 16px;
-      margin-bottom: 4px;
+      line-height: 1.4;
     }
 
-    .product-info .subtitle {
+    .model-info {
       color: var(--muted);
       font-size: 12px;
-      margin-bottom: 10px;
+      margin: 5px 0 12px;
     }
 
     .price {
       font-size: 21px;
       font-weight: bold;
-      margin-bottom: 12px;
     }
 
-    .price small {
-      color: var(--muted);
+    .sample-label {
+      display: block;
       font-size: 11px;
+      color: var(--gold);
       font-weight: normal;
     }
 
     .product-info label {
       display: block;
       font-size: 12px;
-      color: #ccc;
-      margin: 10px 0 5px;
+      color: #ddd;
+      margin: 12px 0 5px;
     }
 
     .product-info select {
       width: 100%;
-      background: #202020;
+      background: #222;
       color: white;
-      border: 1px solid #383838;
+      border: 1px solid #3b3b3b;
       border-radius: 6px;
-      padding: 9px;
+      padding: 10px;
     }
 
     .add-button {
       width: 100%;
-      padding: 11px;
       margin-top: 13px;
-      background: white;
-      color: black;
+      padding: 11px;
       border: 0;
       border-radius: 6px;
+      background: white;
+      color: black;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .add-button:hover,
-    .primary-button:hover {
-      background: var(--accent);
+    .add-button:hover {
+      background: var(--gold);
     }
 
-    .note {
+    .notice {
       color: var(--muted);
       font-size: 12px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
     .about {
       background: #111;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 55px 20px;
     }
 
     .about-inner {
-      max-width: 850px;
-      margin: auto;
-      padding: 55px 20px;
-      text-align: center;
-    }
-
-    .about-inner h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .about-inner p {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .cart-panel {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: flex-end;
-    }
-
-    .cart-panel.open {
-      display: flex;
-    }
-
-    .cart-content {
-      width: min(100%, 440px);
-      height: 100%;
-      background: #101010;
-      padding: 22px;
-      overflow-y: auto;
-      border-left: 1px solid #333;
-    }
-
-    .cart-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .close-button {
-      background: #292929;
-      color: white;
-      border: 0;
-      border-radius: 6px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .cart-item small {
-      color: var(--muted);
-      display: block;
-    }
-
-    .remove-button {
-      color: #ff9999;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-      font-size: 12px;
-    }
-
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 0;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .checkout {
-      display: none;
-      margin-top: 20px;
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
-
-    .checkout.show {
-      display: block;
-    }
-
-    .checkout h3 {
-      margin-bottom: 12px;
-    }
-
-    .form-field {
-      margin-bottom: 12px;
-    }
-
-    .form-field label {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 5px;
-      color: #ddd;
-    }
-
-    .whatsapp-button {
-      width: 100%;
-      border: 0;
-      border-radius: 7px;
-      background: var(--green);
-      color: #07190d;
-      font-weight: bold;
-      padding: 13px;
-      cursor: pointer;
-    }
-
-    footer {
-      max-width: 1200px;
-      margin: auto;
-      padding: 28px 20px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .footer-brand {
-      color: white;
-      font-weight: bold;
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-
-    .empty {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 50px 10px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .hero {
-        padding-top: 50px;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .nav {
-        padding: 13px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .nav-link {
-        display: none;
-      }
-
-      .cart-button {
-        padding: 9px 11px;
-        font-size: 12px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 45px 17px 30px;
-        gap: 25px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero-visual {
-        min-height: 230px;
-      }
-
-      .hero-visual img {
-        height: 220px;
-      }
-
-      .benefits {
-        padding: 0 12px 25px;
-        gap: 7px;
-      }
-
-      .benefit {
-        padding: 12px 5px;
-      }
-
-      .benefit strong {
-        font-size: 11px;
-      }
-
-      .benefit small {
-        font-size: 10px;
-      }
-
-      .section {
-        padding: 30px 12px 45px;
-      }
-
-      .section-heading {
-        display: block;
-      }
-
-      .section-heading p {
-        margin-top: 5px;
-      }
-
-      .filters {
-        grid-template-columns: 1fr;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-      }
-
-      .product-image {
-        height: 160px;
-      }
-
-      .product-info {
-        padding: 11px;
-      }
-
-      .product-info h3 {
-        font-size: 14px;
-      }
-
-      .price {
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="topbar">
-    INTERNATIONAL ENQUIRIES WELCOME · PRICES DISPLAYED IN USD
-  </div>
-
-  <header>
-    <nav class="nav">
-      <a href="#" class="logo">NancyTech <span>Mobile</span></a>
-
-      <div class="nav-right">
-        <a href="#products" class="nav-link">Shop iPhones</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <button class="cart-button" onclick="openCart()">
-          🛒 Cart (<span id="cart-count">0</span>)
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Welcome to NancyTech Mobile</div>
-
-        <h1>Find your next <span>iPhone.</span></h1>
-
-        <p>
-          Explore iPhone models, compare sample prices and storage options,
-          and contact us about your preferred device.
-        </p>
-
-        <a href="#products" class="primary-button">
-          Explore Phones →
-        </a>
-      </div>
-
-      <div class="hero-visual">
-        <img
-          src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=85"
-          alt="Illustrative smartphone product photograph"
-          onerror="this.style.display='none'">
-      </div>
-    </section>
-
-    <section class="benefits">
-      <div class="benefit">
-        <strong>🌍 International Enquiries</strong>
-        <small>Contact us from your country</small>
-      </div>
-
-      <div class="benefit">
-        <strong>💵 USD Pricing</strong>
-        <small>Prices shown in US dollars</small>
-      </div>
-
-      <div class="benefit">
-        <strong>💬 Direct Contact</strong>
-        <small>Discuss your order on WhatsApp</small>
-      </div>
-    </section>
-
-    <section class="section" id="products">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">Our Collection</div>
-          <h2>Explore iPhones</h2>
-        </div>
-
-        <p id="result-count">Browse the collection below.</p>
-      </div>
-
-      <div class="filters">
-        <input
-          type="search"
-          id="search"
-          placeholder="Search iPhone models..."
-          aria-label="Search iPhone models">
-
-        <select id="sort" aria-label="Sort products">
-          <option value="default">Recommended</option>
-          <option value="low">Price: Low to High</option>
-          <option value="high">Price: High to Low</option>
-          <option value="new">Newer Models First</option>
-          <option value="old">Older Models First</option>
-        </select>
-      </div>
-
-      <div class="product-grid" id="product-grid"></div>
-
-      <p class="note">
-        Important: Prices are illustrative estimates, not confirmed offers.
-        Product photos may be illustrative rather than exact model images.
-        Availability, condition, colour, storage, shipping and final prices
-        must be confirmed with NancyTech Mobile before payment.
-      </p>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-inner">
-        <div class="eyebrow">About NancyTech</div>
-        <h2>Your next phone starts here.</h2>
-
-        <p>
-          NancyTech Mobile is an independent phone-store website concept
-          designed to help customers browse devices and send order enquiries.
-        </p>
-
-        <p>
-          Choose your preferred model, select storage, add it to your cart
-          and send your enquiry through WhatsApp.
-        </p>
-
-        <p>
-          We are not affiliated with or endorsed by Apple Inc.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-brand">NancyTech Mobile</div>
-
-    <p>
-      iPhone is a trademark of Apple Inc. Product names are used to
-      identify compatible products.
-    </p>
-
-    <p style="margin-top:8px">
-      © <span id="year"></span> NancyTech Mobile. All rights reserved.
-    </p>
-  </footer>
-
-  <!-- SHOPPING CART -->
-  <div
-    class="cart-panel"
-    id="cart-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Shopping cart"
-    onclick="if(event.target === this) closeCart()">
-
-    <div class="cart-content">
-      <div class="cart-heading">
-        <h2>Your Cart</h2>
-        <button class="close-button" onclick="closeCart()">Close ✕</button>
-      </div>
-
-      <div id="cart-items"></div>
-
-      <div class="cart-total">
-        <span>Estimated total</span>
-        <span id="cart-total">$0</span>
-      </div>
-
-      <p class="note">
-        This is an enquiry cart, not a payment system. Final prices and
-        availability must be confirmed before you pay.
-      </p>
-
-      <button
-        class="primary-button"
-        style="width:100%;margin-top:15px"
-        onclick="showCheckout()">
-        Continue to Order Enquiry
-      </button>
-
-      <div class="checkout" id="checkout">
-        <h3>Customer Details</h3>
-
-        <form id="order-form">
-          <div class="form-field">
-            <label for="customer-name">Full name *</label>
-            <input id="customer-name" required maxlength="100"
-              autocomplete="name" placeholder="Your name">
-          </div>
-
-          <div class="form-field">
-            <label for="customer-phone">Phone number *</label>
-            <input id="customer-phone" required maxlength="30"
-              autocomplete="tel" placeholder="+233...">
-          </div>
-
-          <div class="form-field">
-            <label for="customer-country">Country *</label>
-            <input id="customer-country" required maxlength="80"
-              autocomplete="country-name" placeholder="Your country">
-          </div>
-
-          <div class="form-field">
-            <label for="customer-city">City *</label>
-            <input id="customer-city" required maxlength="80"
-              autocomplete="address-level2" placeholder="Your city">
-          </div>
-
-          <div class="form-field">
-            <label for="customer-notes">Additional details (optional)</label>
-            <input id="customer-notes" maxlength="300"
-              placeholder="Preferred colour or other questions">
-          </div>
-
-          <button class="whatsapp-button" type="submit">
-            💬 Send Enquiry on WhatsApp
-          </button>
-
-          <p class="note">
-            Your details will be included in the WhatsApp message you choose
-            to send. Review them before sending.
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    /*
-      SETUP:
-      1. Replace the WhatsApp placeholder below with your business number.
-      2. Use the international format without +, spaces or dashes.
-         Example format: +12485339458
-      3. Replace illustrative prices with your real prices.
-      4. Confirm the exact model and image before advertising availability.
-    */
-
-    const WHATSAPP_NUMBER = "+12485339458";
-
-    /*
-      These are illustrative product listings and sample prices.
-      They do not confirm that these phones are in stock.
-
-      The remote photos are illustrative stock photography, not guaranteed
-      to represent the exact model. Replace with properly licensed,
-      model-accurate product photos when available.
-    */
-
-    const imageLinks = {
-      general:
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=700&q=80",
-
-      phone:
-        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=700&q=80",
-
-      modern:
-        "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=700&q=80",
-
-      device:
-        "https://images.unsplash.com/photo-1603891128711-11b4b03bb138?auto=format&fit=crop&w=700&q=80"
-    };
-
-    const products = [
-      {
-        id: "xr",
-        name: "iPhone XR",
-        year: 2018,
-        price: 149,
-        image: imageLinks.general,
-        badge: "Classic",
-        storage: [64, 128, 256]
-      },
-      {
-        id: "11",
-        name: "iPhone 11",
-        year: 2019,
-        price: 199,
-        image: imageLinks.phone,
-        badge: "",
-        storage: [64, 128, 256]
-      },
-      {
-        id: "11-pro",
-        name: "iPhone 11 Pro",
-        year: 2019,
-        price: 249,
-        image: imageLinks.modern,
-        badge: "",
-        storage: [64, 256, 512]
-      },
-      {
-        id: "12",
-        name: "iPhone 12",
-        year: 2020,
-        price: 249,
-        image: imageLinks.device,
-        badge: "",
-        storage: [64, 128, 256]
-      },
-      {
-        id: "12-pro",
-        name: "iPh
+      max-width: 750px;
+     
