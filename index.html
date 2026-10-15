@@ -4,393 +4,565 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NancyTech Mobile | Premium iPhones</title>
+  <title>NancyTech Mobile | Premium Apple Devices</title>
 
-  <meta name="description" content="Explore iPhones at NancyTech Mobile. Browse models, compare sample prices, select storage and send an international order enquiry.">
+  <meta
+    name="description"
+    content="Explore Apple iPhones at NancyTech Mobile. Browse models, select storage, and enquire about current prices through WhatsApp."
+  >
 
   <meta name="theme-color" content="#080808">
 
-  <style>
-    :root {
-      --bg: #080808;
-      --card: #151515;
-      --gold: #d6b46a;
-      --white: #ffffff;
-      --muted: #a8a8a8;
-      --green: #25d366;
-      --border: #2b2b2b;
-    }
+  <link rel="stylesheet" href="./style.css">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <script src="./script.js" defer></script>
+</head>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<body>
 
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-icon">N</span>
+      <span>NancyTech<span class="brand-light"> Mobile</span></span>
+    </a>
 
-    button,
-    input,
-    select {
-      font: inherit;
-    }
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#products">iPhones</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
+    <button class="cart-button" id="openCart" type="button">
+      Bag <span id="cartCount">0</span>
+    </button>
+  </header>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  <main>
 
-    img {
-      max-width: 100%;
-    }
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO NANCYTECH MOBILE</p>
 
-    .announcement {
-      background: #111;
-      color: #ddd;
-      text-align: center;
-      padding: 9px;
-      font-size: 12px;
-      border-bottom: 1px solid var(--border);
-    }
+        <h1>
+          The world of<br>
+          <span>iPhone.</span>
+        </h1>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(8, 8, 8, .97);
-      border-bottom: 1px solid var(--border);
-    }
+        <p class="hero-description">
+          Discover your next iPhone with a simple shopping experience.
+          Choose your preferred model and storage, then enquire directly
+          through WhatsApp.
+        </p>
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-    }
+        <div class="hero-actions">
+          <a href="#products" class="button button-primary">
+            Explore iPhones
+          </a>
 
-    .logo {
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
+          <a href="#about" class="button button-secondary">
+            Learn more
+          </a>
+        </div>
 
-    .logo span {
-      color: var(--gold);
-    }
+        <p class="hero-note">
+          Current prices and availability confirmed on enquiry.
+        </p>
+      </div>
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+      <div class="hero-visual" aria-label="Illustration of a smartphone">
+        <div class="phone phone-back">
+          <div class="camera camera-one"></div>
+          <div class="camera camera-two"></div>
+          <div class="camera camera-three"></div>
+          <div class="phone-logo">N</div>
+        </div>
 
-    .nav-links a {
-      font-size: 14px;
-      color: #ddd;
-    }
+        <div class="phone phone-front">
+          <div class="phone-island"></div>
 
-    .cart-button {
-      background: white;
-      color: black;
-      padding: 10px 14px;
-      border: 0;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+          <div class="phone-screen">
+            <span class="screen-small">NANCYTECH</span>
+            <span class="screen-title">Think<br>different.</span>
+            <span class="screen-orb"></span>
+          </div>
+        </div>
 
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 65px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 35px;
-    }
+        <div class="floating-label">
+          <span class="status-dot"></span>
+          Your next iPhone awaits
+        </div>
+      </div>
+    </section>
 
-    .eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
+    <section class="trust-strip">
+      <div>
+        <strong>Explore</strong>
+        <span>Different iPhone models</span>
+      </div>
 
-    .hero h1 {
-      font-size: clamp(40px, 6vw, 70px);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
+      <div>
+        <strong>Choose</strong>
+        <span>Your preferred storage</span>
+      </div>
 
-    .hero h1 span {
-      color: var(--gold);
-    }
+      <div>
+        <strong>Enquire</strong>
+        <span>Direct WhatsApp contact</span>
+      </div>
+    </section>
 
-    .hero p {
-      color: var(--muted);
-      max-width: 470px;
-      margin-bottom: 25px;
-    }
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIND YOUR DEVICE</p>
+          <h2>Which iPhone is for you?</h2>
+          <p class="section-description">
+            Browse the collection and choose a model that suits you.
+          </p>
+        </div>
 
-    .primary-button {
-      display: inline-block;
-      padding: 13px 22px;
-      background: white;
-      color: black;
-      border: 0;
-      border-radius: 7px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
 
-    .primary-button:hover {
-      background: var(--gold);
-    }
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Search iPhones..."
+            aria-label="Search iPhone models"
+          >
+        </div>
+      </div>
 
-    .hero-image {
-      min-height: 300px;
-      padding: 20px;
-      border: 1px solid #333;
-      border-radius: 18px;
-      background: radial-gradient(ellipse, #373127, #151515 65%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      <div class="filter-row">
+        <button class="filter-button active" data-filter="all" type="button">
+          All iPhones
+        </button>
 
-    .hero-image img {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
-      filter: drop-shadow(0 15px 20px #000);
-    }
+        <button class="filter-button" data-filter="standard" type="button">
+          iPhone
+        </button>
 
-    .features {
-      max-width: 1200px;
-      padding: 0 20px 40px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
+        <button class="filter-button" data-filter="pro" type="button">
+          Pro
+        </button>
 
-    .feature {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px 10px;
-      text-align: center;
-    }
+        <button class="filter-button" data-filter="plus" type="button">
+          Plus & Max
+        </button>
+      </div>
 
-    .feature strong {
-      display: block;
-      font-size: 14px;
-    }
+      <div class="product-grid" id="productGrid">
 
-    .feature small {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 5px;
-    }
+        <!-- Product 1 -->
+        <article
+          class="product-card"
+          data-name="iPhone 17 Pro Max"
+          data-category="pro"
+          data-id="iphone-17-pro-max"
+        >
+          <div class="product-image image-orange">
+            <span class="product-tag">Pro Max</span>
+            <div class="device-art device-pro">
+              <div class="device-cameras">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
 
-    .section {
-      max-width: 1200px;
-      padding: 45px 20px 65px;
-      margin: auto;
-    }
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 17 Pro Max</h3>
+            <p class="product-description">
+              A premium Pro Max experience.
+            </p>
 
-    .section-heading {
-      margin-bottom: 25px;
-    }
+            <label for="storage-17pm">Storage</label>
 
-    .section-heading h2 {
-      font-size: clamp(28px, 4vw, 40px);
-      letter-spacing: -1px;
-    }
+            <select id="storage-17pm" class="storage-select">
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+              <option value="1TB">1TB</option>
+              <option value="2TB">2TB</option>
+            </select>
 
-    .section-heading p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 5px;
-    }
+            <p class="price">Ask for current price</p>
 
-    .filters {
-      display: grid;
-      grid-template-columns: 1fr 200px;
-      gap: 12px;
-      margin-bottom: 25px;
-    }
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-17-pro-max"
+              data-name="iPhone 17 Pro Max"
+              data-storage="storage-17pm"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
 
-    .filters input,
-    .filters select,
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 13px;
-      color: white;
-      background: #171717;
-      border: 1px solid #363636;
-      border-radius: 7px;
-      outline: none;
-    }
+        <!-- Product 2 -->
+        <article
+          class="product-card"
+          data-name="iPhone 17 Pro"
+          data-category="pro"
+          data-id="iphone-17-pro"
+        >
+          <div class="product-image image-silver">
+            <span class="product-tag">Pro</span>
+            <div class="device-art device-pro">
+              <div class="device-cameras">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
 
-    .filters input:focus,
-    .filters select:focus,
-    .form-group input:focus {
-      border-color: var(--gold);
-    }
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 17 Pro</h3>
+            <p class="product-description">
+              Powerful performance in a Pro design.
+            </p>
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 17px;
-    }
+            <label for="storage-17p">Storage</label>
 
-    .product-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform .2s, border-color .2s;
-    }
+            <select id="storage-17p" class="storage-select">
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+              <option value="1TB">1TB</option>
+            </select>
 
-    .product-card:hover {
-      transform: translateY(-4px);
-      border-color: #666;
-    }
+            <p class="price">Ask for current price</p>
 
-    .product-image {
-      position: relative;
-      height: 220px;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: radial-gradient(ellipse, #333, #171717 72%);
-    }
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-17-pro"
+              data-name="iPhone 17 Pro"
+              data-storage="storage-17p"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+        <!-- Product 3 -->
+        <article
+          class="product-card"
+          data-name="iPhone 17"
+          data-category="standard"
+          data-id="iphone-17"
+        >
+          <div class="product-image image-blue">
+            <span class="product-tag">iPhone</span>
+            <div class="device-art device-standard">
+              <div class="standard-cameras">
+                <i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
 
-    /* Show a fallback if an external image fails to load. */
-    .product-image.image-fallback::after {
-      content: "📱";
-      position: absolute;
-      font-size: 100px;
-      filter: drop-shadow(0 10px 15px #000);
-    }
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 17</h3>
+            <p class="product-description">
+              Everyday style and performance.
+            </p>
 
-    .badge {
-      position: absolute;
-      z-index: 2;
-      top: 10px;
-      left: 10px;
-      background: var(--gold);
-      color: #111;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: bold;
-    }
+            <label for="storage-17">Storage</label>
 
-    .product-info {
-      padding: 15px;
-    }
+            <select id="storage-17" class="storage-select">
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+            </select>
 
-    .product-info h3 {
-      font-size: 16px;
-      line-height: 1.4;
-    }
+            <p class="price">Ask for current price</p>
 
-    .model-info {
-      color: var(--muted);
-      font-size: 12px;
-      margin: 5px 0 12px;
-    }
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-17"
+              data-name="iPhone 17"
+              data-storage="storage-17"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
 
-    .price {
-      font-size: 21px;
-      font-weight: bold;
-    }
+        <!-- Product 4 -->
+        <article
+          class="product-card"
+          data-name="iPhone 16 Pro Max"
+          data-category="pro"
+          data-id="iphone-16-pro-max"
+        >
+          <div class="product-image image-titanium">
+            <span class="product-tag">Pro Max</span>
+            <div class="device-art device-pro">
+              <div class="device-cameras">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
 
-    .sample-label {
-      display: block;
-      font-size: 11px;
-      color: var(--gold);
-      font-weight: normal;
-    }
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 16 Pro Max</h3>
+            <p class="product-description">
+              A large display and a premium design.
+            </p>
 
-    .product-info label {
-      display: block;
-      font-size: 12px;
-      color: #ddd;
-      margin: 12px 0 5px;
-    }
+            <label for="storage-16pm">Storage</label>
 
-    .product-info select {
-      width: 100%;
-      background: #222;
-      color: white;
-      border: 1px solid #3b3b3b;
-      border-radius: 6px;
-      padding: 10px;
-    }
+            <select id="storage-16pm" class="storage-select">
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+              <option value="1TB">1TB</option>
+            </select>
 
-    .add-button {
-      width: 100%;
-      margin-top: 13px;
-      padding: 11px;
-      border: 0;
-      border-radius: 6px;
-      background: white;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-    }
+            <p class="price">Ask for current price</p>
 
-    .add-button:hover {
-      background: var(--gold);
-    }
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-16-pro-max"
+              data-name="iPhone 16 Pro Max"
+              data-storage="storage-16pm"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
 
-    .notice {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 22px;
-    }
+        <!-- Product 5 -->
+        <article
+          class="product-card"
+          data-name="iPhone 16 Pro"
+          data-category="pro"
+          data-id="iphone-16-pro"
+        >
+          <div class="product-image image-natural">
+            <span class="product-tag">Pro</span>
+            <div class="device-art device-pro">
+              <div class="device-cameras">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
 
-    .about {
-      background: #111;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-      padding: 55px 20px;
-    }
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 16 Pro</h3>
+            <p class="product-description">
+              Premium design for everyday use.
+            </p>
 
-    .about-inner {
-      max-width: 750px;
-     
+            <label for="storage-16p">Storage</label>
+
+            <select id="storage-16p" class="storage-select">
+              <option value="128GB">128GB</option>
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+              <option value="1TB">1TB</option>
+            </select>
+
+            <p class="price">Ask for current price</p>
+
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-16-pro"
+              data-name="iPhone 16 Pro"
+              data-storage="storage-16p"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article
+          class="product-card"
+          data-name="iPhone 16 Plus"
+          data-category="plus"
+          data-id="iphone-16-plus"
+        >
+          <div class="product-image image-pink">
+            <span class="product-tag">Plus</span>
+            <div class="device-art device-standard">
+              <div class="standard-cameras">
+                <i></i><i></i>
+              </div>
+              <div class="device-screen-glow"></div>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-family">iPhone</p>
+            <h3>iPhone 16 Plus</h3>
+            <p class="product-description">
+              A bigger-screen iPhone experience.
+            </p>
+
+            <label for="storage-16plus">Storage</label>
+
+            <select id="storage-16plus" class="storage-select">
+              <option value="128GB">128GB</option>
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+            </select>
+
+            <p class="price">Ask for current price</p>
+
+            <button
+              class="button button-dark add-to-cart"
+              data-id="iphone-16-plus"
+              data-name="iPhone 16 Plus"
+              data-storage="storage-16plus"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults" hidden>
+        No matching iPhones found. Try another search.
+      </p>
+
+      <p class="illustration-note">
+        Note: The phone artwork on this demo is illustrative, not official
+        product photography. Confirm the exact model, condition, colour,
+        storage, and availability before purchasing.
+      </p>
+    </section>
+
+    <section class="feature-section" id="about">
+      <div class="feature-visual">
+        <div class="feature-ring ring-one"></div>
+        <div class="feature-ring ring-two"></div>
+        <div class="feature-symbol">N</div>
+      </div>
+
+      <div class="feature-copy">
+        <p class="eyebrow">THE NANCYTECH EXPERIENCE</p>
+
+        <h2>Simple shopping.<br>Direct communication.</h2>
+
+        <p>
+          Browse available models, select your preferred storage, and
+          send your enquiry directly to NancyTech Mobile.
+        </p>
+
+        <ul class="feature-list">
+          <li>✓ Browse multiple iPhone models</li>
+          <li>✓ Select your preferred storage</li>
+          <li>✓ Ask about current prices</li>
+          <li>✓ Confirm availability directly</li>
+        </ul>
+
+        <a href="#products" class="button button-primary">
+          Browse collection
+        </a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">LET'S TALK</p>
+      <h2>Ready to find your iPhone?</h2>
+
+      <p>
+        Contact NancyTech Mobile through WhatsApp to ask about prices,
+        availability, and your preferred device.
+      </p>
+
+      <a
+        class="button button-primary"
+        href="https://wa.me/12485339458"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chat on WhatsApp ↗
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="footer-brand">NancyTech Mobile</a>
+
+    <p>
+      Your next device starts here.
+    </p>
+
+    <p class="copyright">
+      © <span id="currentYear"></span> NancyTech Mobile.
+      All rights reserved.
+    </p>
+
+    <p class="disclaimer">
+      NancyTech Mobile is an independent store and is not affiliated with
+      or endorsed by Apple Inc.
+    </p>
+  </footer>
+
+  <!-- Shopping cart panel -->
+  <div class="cart-overlay" id="cartOverlay" hidden>
+    <section
+      class="cart-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cartTitle"
+    >
+      <div class="cart-header">
+        <h2 id="cartTitle">Your bag</h2>
+
+        <button
+          id="closeCart"
+          class="close-button"
+          type="button"
+          aria-label="Close shopping bag"
+        >
+          ×
+        </button>
+      </div>
+
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Your bag is empty.</p>
+      </div>
+
+      <div class="cart-footer">
+        <p class="cart-note">
+          Prices are confirmed directly with NancyTech Mobile.
+        </p>
+
+        <button
+          id="checkoutButton"
+          class="button button-primary checkout-button"
+          type="button"
+        >
+          Enquire on WhatsApp
+        </button>
+
+        <button
+          id="clearCart"
+          class="clear-button"
+          type="button"
+        >
+          Clear bag
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+              </html>
